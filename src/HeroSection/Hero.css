@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 1352px;
+  margin-left: -10px;
+  margin-right: -10px;
+  color: white;
+  background-image: url('../assets/Poster.png');
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 90px;
+  height: 40px;
+  padding: 10px;
+  width: auto;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 186px;
+  height: 50px;
+  margin-top: -4px;
+}
+
+.logo ion-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar input {
+  width: 525px;
+  height: 36px;
+  border: 2px solid rgb(223, 214, 214);
+  color: white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  background-color: transparent;
+}
+
+.logo h1 {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.signin {
+  width: 90px;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.signin p {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.signin ion-icon {
+  font-size: 34px;
+  color: #BE123C;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+  padding: 20px;
+}
+
+.description {
+  width: 404px;
+  height: 285px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.description h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  margin: 0;
+}
+
+.rating {
+  width: 184px;
+  height: 17px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating figure{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating figcaption {
+  font-family: "DM Sans";
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 10px;
+}
+
+.description .watch {
+  width: 180px;
+  height: 36px;
+  border-radius: 6px;
+  padding: 6px 16px;
+  background-color: #BE123C;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.description .watch ion-icon {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.description .watch p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  margin-left: 10px;
+}
+
+.description p {
+  width: 302px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+}

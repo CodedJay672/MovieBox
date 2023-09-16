@@ -1,0 +1,16 @@
+.movie {
+  width: 250px;
+  height: 490px;
+  border-radius: 6px;
+  color: #111827;
+  text-decoration: none;
+}
+
+.movieInfo h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.44px;
+  color: #111827;
+  margin: 10px 0;
+}
