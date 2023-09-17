@@ -19,7 +19,7 @@ module.exports = {
         type: 'asset/resource'
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         loader: 'image-webpack-loader',
         enforce: 'pre'
       },
@@ -45,7 +45,7 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../dist/index.html'),
+      template: path.resolve(__dirname, '../src/dist/index.html'),
       filename: 'index.html',
       inject: 'body',
     })

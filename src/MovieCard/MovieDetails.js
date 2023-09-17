@@ -1,39 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Loading from "../LoadingSection/Loading";
 import MovieDetailSet from './MovieDetailSet';
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import tv from "../assets/tv.png";
-import './MovieDetails.css';
+import { movieDetail } from '../../utils/utilityFunctions';
+import { useLoaderData } from "react-router-dom";
+
+export async function loader({ params }) {
+  const details = await movieDetail(params.id);
+  return {details};
+}
 
 export default function MovieDetails() {
-  const [details, setDetails] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const api_key = "261b34855ce740d5613d726a1dd68fe2";
-  const { id } = useParams();
-
-  useEffect(() => {
-    const getDetails = async () => {
-      try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`, {
-          headers: {
-            Accept: "application/json"
-          }
-        })
-        const result = await response.json();
-        setDetails(result);
-        setIsLoading(false);
-      } catch (err) {
-        throw new Error(err);
-      }
-    }
-
-    getDetails();
-  }, [])
-
+  const { details } = useLoaderData();
+  
   return (
     <div className="movie-detail-card">
       <div className="sidebar">
-        <div className="header">
+        <div className="header"> 
           <img src={tv} alt="logo" /><span>MovieBox</span>
         </div>
         <div className="sidebar-menu">
@@ -56,7 +40,7 @@ export default function MovieDetails() {
         </div>
       </div>
       <div className="main">
-        {isLoading ? <Loading /> : <MovieDetailSet details={details} />}
+        {!details ? <Loading /> : <MovieDetailSet details={details} />}
       </div>
     </div>
   )
